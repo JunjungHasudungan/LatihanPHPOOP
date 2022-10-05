@@ -10,5 +10,5 @@ class Buku extends Produk {
     
 }
 
-echo Buku::sayHello("Asep");
+echo Buku::sayHello(name: 'Asep');
 // output: hello nama saya adalah asep

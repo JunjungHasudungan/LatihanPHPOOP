@@ -2,7 +2,7 @@
 
 abstract class ParentClass {
 
-    public static string $title = 'Ini Class' . __CLASS__;
+    public static string $title = 'Ini dari ' . __CLASS__;
 
     public static function getTitle(){
         return new static;
@@ -16,25 +16,26 @@ abstract class ParentClass {
 
 class ChildClass extends ParentClass{
 
-    public static string $title =  'Ini Class '.  __CLASS__;
+    public static string $title = 'Ini dari ' . __CLASS__;
 
     public static function getTitle(){
         return Coba::$title;
     }
 
     public static function getSelf(){
-        return ChildClass::getTitle();
+        return ChildClass::$title;
     }
-    
 }
 
-class Coba {
+class Coba extends ChildClass{
 
-    public static $title = 'Ini class ' . __CLASS__;
+   public static string $title = 'Ini dari ' . __CLASS__;
 }
 
+// echo ParentClass::getTitle();
+// echo '<hr>';
 echo ChildClass::getTitle();
 // output: 
 echo '<hr>';
-echo ChildClass::getSelf();
+echo Coba::getSelf();
 // output:
