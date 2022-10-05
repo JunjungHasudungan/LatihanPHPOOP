@@ -18,4 +18,4 @@ class Pesan {
 // inisialisasi class objek
 $pesan = new Pesan();
 echo $pesan->apaKabarDariTraitSelamatPagi();
-// outout: tulis apa yang ditampilkan 
+// outout: Pesan Selamat Pagi
